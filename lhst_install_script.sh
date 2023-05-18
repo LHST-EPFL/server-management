@@ -86,11 +86,11 @@ chmod 775 /scratch
 chown root:LHST-unit /scratch
 
 ########################################
-# Mount point for LHSTdata
+# Mount point for lhstdata1
 
-mkdir /LHSTdata
-echo "#LHSTdata" >> /etc/fstab
-echo "cdh1files.epfl.ch://u13673_cdh_lhst_001_files_nfs /LHSTdata nfs     defaults 0 0" >> /etc/fstab
+mkdir /lhstdata1
+echo "#lhstdata1" >> /etc/fstab
+echo "cdh1files.epfl.ch:/u13673_cdh_lhst_001_files_nfs/lhstdata1 /lhstdata1 nfs     defaults 0 0" >> /etc/fstab
 
 ########################################
 # Give sudo powers to our power users
