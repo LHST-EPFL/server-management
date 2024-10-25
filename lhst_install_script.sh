@@ -98,6 +98,7 @@ echo "cdh1files.epfl.ch:/u13673_cdh_lhst_001_files_nfs/lhstdata1 /lhstdata1 nfs 
 usermod --append --groups sudo chachere
 usermod --append --groups sudo sidorenk
 usermod --append --groups sudo pgupta
+usermod --append --groups sudo sdumas
 
 #########################################
 # Some basic necessities
