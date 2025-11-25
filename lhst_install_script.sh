@@ -90,7 +90,7 @@ chown root:LHST-unit /scratch
 
 mkdir /lhstdata1
 echo "#lhstdata1" >> /etc/fstab
-echo "cdh1files.epfl.ch:/u13673_cdh_lhst_001_files_nfs/lhstdata1 /lhstdata1 nfs     defaults 0 0" >> /etc/fstab
+echo "cdh-nas1-nfs.rcp.epfl.ch:/cdh/u1712_lhst/lhst_001_files_nfs/lhstdata1 /lhstdata1 nfs     nfsvers=3,sec=sys 0 1" >> /etc/fstab
 
 ########################################
 # Give sudo powers to our power users
