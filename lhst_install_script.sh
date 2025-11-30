@@ -165,33 +165,6 @@ install python-dev-is-python3
 
 pip install ipython[all]
 
-#########################################
-# Install Cuda
-
-wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-ubuntu2204.pin
-mv cuda-ubuntu2204.pin /etc/apt/preferences.d/cuda-repository-pin-600
-wget https://developer.download.nvidia.com/compute/cuda/12.0.1/local_installers/cuda-repo-ubuntu2204-12-0-local_12.0.1-525.85.12-1_amd64.deb
-dpkg -i cuda-repo-ubuntu2204-12-0-local_12.0.1-525.85.12-1_amd64.deb
-cp /var/cuda-repo-ubuntu2204-12-0-local/cuda-*-keyring.gpg /usr/share/keyrings/
-apt-get update
-apt-get install -y cuda
-apt-get install -y nvidia-cuda-toolkit
-apt-get install -y nvidia-driver-510 nvidia-dkms-510
-
-########################################
-# Install Miniconda
-
-wget https://repo.anaconda.com/miniconda/Miniconda3-py310_23.1.0-1-Linux-x86_64.sh -P /tmp
-chmod +x /tmp/Miniconda3-py310_23.1.0-1-Linux-x86_64.sh
-/tmp/Miniconda3-py310_23.1.0-1-Linux-x86_64.sh -b -p /opt/anaconda3
-echo PATH="/opt/anaconda3/bin:$PATH"  > /etc/environment
-export PATH="/opt/anaconda3/bin:$PATH"
-
-########################################
-# Install PyTorch
-
-conda install -y pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
-
 echo
 echo
 echo "DONE!"
