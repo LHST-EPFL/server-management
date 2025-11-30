@@ -95,10 +95,13 @@ echo "cdh-nas1-nfs.rcp.epfl.ch:/cdh/u1712_lhst/lhst_001_files_nfs/lhstdata1 /lhs
 ########################################
 # Give sudo powers to our power users
 
-usermod --append --groups sudo chachere
-usermod --append --groups sudo sidorenk
-usermod --append --groups sudo pgupta
-usermod --append --groups sudo sdumas
+sudoer() {
+    usermod --append --groups sudo "$1" || echo " ... skipped user $1"
+}
+
+sudoer chachere
+sudoer sidorenk
+sudoer sdumas
 
 #########################################
 # Some basic necessities
